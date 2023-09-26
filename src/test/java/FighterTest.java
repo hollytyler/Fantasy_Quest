@@ -11,14 +11,14 @@ public class FighterTest {
 
     @Before
     public void before() {
+        sword = new Sword(50);
         barbarian = new Barbarian("Dave", 100, sword);
         troll = new Troll("Timmy", 200);
-        sword = new Sword(50);
     }
 
     @Test
     public void canAttack() {
         barbarian.doesAttack(troll);
-        assertEquals(149, troll.getHealth());
+        assertEquals(150, troll.getHealth());
     }
 }
